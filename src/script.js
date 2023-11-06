@@ -39,11 +39,6 @@ function crearElementoTarea(tarea) {
   const checkboxTarea = document.createElement("input");
   checkboxTarea.type = "checkbox";
   checkboxTarea.checked = tarea.estaCompletada;
-  checkboxTarea.addEventListener("change", () => {
-    tarea.estaCompletada = checkboxTarea.checked;
-    textoTarea.classList.toggle("completada", tarea.estaCompletada);
-    textoTarea.value.toggle("Completada", tarea.estaCompletada);
-  });
 
   const textoTarea = document.createElement("span");
   textoTarea.textContent = tarea.titulo;
